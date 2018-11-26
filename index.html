@@ -6,7 +6,11 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script type="text/javascript">
     $(function(){
-      $("#1").click(function(){
+      $("p").css("color","red");
+      $("#toggle").on("click",function(){
+        $("#target").fadeToggle("slow");
+      });
+     $("#1").click(function(){
         $(".block").1(
           {width: "toggle",opacity: "toggle"},
           {duration: "slow",easing: "linear",
@@ -14,10 +18,6 @@
            step: function(s){$("#steps").text(s)}
           }
           );
-      });
-      $("p").css("color","red");
-      $("#toggle").on("click",function(){
-        $("#target").fadeToggle("slow");
       });
     });
   </script>
